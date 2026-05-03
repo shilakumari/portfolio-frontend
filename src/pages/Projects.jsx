@@ -22,7 +22,7 @@ function Projects() {
 
   return (
     <div style={styles.container}>
-      <h2>Projects</h2>
+      <h2 style={styles.heading}>My Projects</h2>
 
       <div style={styles.grid}>
         {projects.map((project) => (
@@ -36,8 +36,8 @@ function Projects() {
               <strong>Tech Stack:</strong> {project.techStack}
             </p>
 
-            <a href={project.githubUrl} target="_blank">
-              GitHub
+            <a href={project.githubUrl} target="_blank" rel="noreferrer" style={styles.button}>
+              View GitHub
             </a>
 
           </div>
@@ -48,20 +48,36 @@ function Projects() {
 }
 
 const styles = {
+
   container: {
-    padding: "20px"
+    padding: "40px"
+  },
+
+  heading: {
+    marginBottom: "30px",
+    textAlign: "center"
   },
 
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-    gap: "20px"
+    gap: "25px"
   },
 
   card: {
-    border: "1px solid #3a2f2f",
-    padding: "20px",
-    borderRadius: "10px"
+    backgroundColor: "#fff",
+    padding: "25px",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.08)"
+  },
+
+  button: {
+    display: "inline-block",
+    marginTop: "15px",
+    padding: "10px 15px",
+    backgroundColor: "#333",
+    color: "#fff",
+    borderRadius: "6px"
   }
 };
 
