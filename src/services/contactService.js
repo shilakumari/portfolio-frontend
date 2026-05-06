@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://13.218.215.173:8080/api/contact";
+const BASE_URL = "https://api.shilakumari.com/api/contact";
 
 export const sendMessage = async (contactData) => {
   const response = await axios.post(BASE_URL, contactData);

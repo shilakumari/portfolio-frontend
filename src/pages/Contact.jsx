@@ -22,7 +22,7 @@ function Contact() {
 
   // API call function
   const sendMessage = async (data) => {
-    const response = await fetch("http://13.218.215.173:8080/api/contact", {
+    const response = await fetch("https://api.shilakumari.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
